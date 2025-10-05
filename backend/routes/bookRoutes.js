@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const { getAllBooks, getBookById, addBook, updateBook, deleteBook } = require('../controllers/bookController');
+const { addReviewForBook } = require('../controllers/reviewController');
+const { protect } = require('../middleware/authMiddleware');
+router.get('/', getAllBooks);
+router.get('/:id', getBookById);
+router.post('/', protect, addBook);
+router.put('/:id', protect, updateBook);
+router.delete('/:id', protect, deleteBook);
+router.post('/:bookId/reviews', protect, addReviewForBook);
+module.exports = router;
