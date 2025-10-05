@@ -40,7 +40,7 @@ To run this project locally, follow these steps:
 1. Clone the repository
 Bash
 
-git clone https://github.com/your-username/book-review-app.git
+git clone https://github.com/saadzaveri26/book-review-app.git
 cd book-review-app
 2. Backend Setup
 Bash
